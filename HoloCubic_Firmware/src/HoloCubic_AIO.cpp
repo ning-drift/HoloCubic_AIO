@@ -25,7 +25,6 @@
 #include "app/settings/settings.h"
 #include "app/file_manager/file_manager.h"
 #include "app/game_2048/game_2048.h"
-#include "app/weather_old/weather_old.h"
 
 /*** Component objects **7*/
 IMU mpu;
@@ -66,7 +65,6 @@ void setup()
     app_contorller->app_register(&settings_app);
     app_contorller->app_register(&game_2048_app);
     app_contorller->app_register(&file_manager_app);
-    app_contorller->app_register(&weather_old_app);
 
     // 优先显示屏幕 加快视觉上的开机时间
     app_contorller->main_process(&mpu.action_info);
